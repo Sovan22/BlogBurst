@@ -31,11 +31,7 @@
 
     </LinearLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/frag_placeholder"
-        />
+
 
     <ImageButton
         android:layout_width="50dp"
@@ -72,6 +68,12 @@
         android:background="@color/darkBlue"
         android:layout_margin="20dp"
         android:layout_gravity="start|bottom"
+        />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_placeholder"
         />
 
     <ProgressBar
