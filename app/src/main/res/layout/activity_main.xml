@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBlue"
+    tools:context=".ui.blogList.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:title="BlogBurst"
+            android:layout_height="wrap_content"
+            android:background="@color/lightBlue"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blog_list_rv"
+            android:padding="5dp"
+            android:layout_marginBottom="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frag_placeholder"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:id="@+id/next_page"
+        android:scaleType="center"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:src="@drawable/baseline_arrow_forward_ios_24"
+        android:background="@color/darkBlue"
+        android:layout_margin="20dp"
+        android:layout_gravity="end|bottom"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/page_number"
+        android:textSize="20sp"
+        android:fontFamily="@font/caudex_bold"
+        android:text="Page 1"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:id="@+id/previous_page"
+        android:scaleType="center"
+        android:src="@drawable/baseline_arrow_back_ios_24"
+        android:background="@color/darkBlue"
+        android:layout_margin="20dp"
+        android:layout_gravity="start|bottom"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:id="@+id/loading_page"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</FrameLayout>
